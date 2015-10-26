@@ -47,7 +47,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		api: 'https://lesbonneschoses.prismic.io/api',
 		prismicQueries: [
 			{
-				balises: ["latest news"],
+				balises: ["latestnews"],
 				predicat: Prismic.Predicates.at("document.type", "product")
 			}
 		],
@@ -108,11 +108,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="clearfix"> </div>
 					</section>
 					<section class="col-3 ss-style-doublediagonal our-features">
-							<div class="container" id="latest news"> 
+							<div class="container" id="latestnews"> 
 							<h2>Our features</h2>
 							<p>Paragraphs lorem ipsum simply a dummy text to format fonts and</p>
 <script type="text/template">
-							<% for(var i=0; i<docs.results.length; i++) { %>
+							<% for(var i=0; i< Math.min(3, docs.results.length); i++) { %>
 <div class="col-md-4 column our-feat">
 	<h3><%= docs.results[i].slug %></h3>
 	<p><%= docs.results[i].getText("product.description") %></p>
